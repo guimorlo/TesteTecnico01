@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Técnico 01</title>
+</head>
+<body>
+    <div id="entrada" style="border-bottom: 2px solid black; padding: 5px; width: fit-content;">
+        <input id="numero" placeholder="Informe o número" type="number" style="margin-right: 3px;">
+        <button onclick="somatorio()">Executar</button>
+    </div>
+    <div id="saida" style=" padding: 5px; width: fit-content;">
+
+    </div>
+    <script>
+        const saida = document.getElementById("saida");
+        function somatorio(){
+            var numero = document.getElementById("numero").value;
+            var soma = 0;
+            for (var i = 1; i < numero; i++) {
+                if ((i % 3 == 0) || (i % 5 == 0)){
+                    //alert(i);
+                    soma += i;
+                }
+            }
+            saida.innerHTML = "Resultado: " + soma;
+        }
+    </script>
+</body>
+</html>
